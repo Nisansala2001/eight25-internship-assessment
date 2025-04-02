@@ -14,6 +14,17 @@ body {
   margin: 0 auto;
   padding: 100px 20px;
   text-align: center;
+  
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .text-content h1 {
@@ -37,6 +48,12 @@ body {
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #d83a6b; /* Slightly darker shade for hover effect */
+  transform: scale(1.05);
 }
 
 .arrow {
@@ -64,6 +81,17 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 10px;
   position: absolute;
+  
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .top-left    { top: 10%; left: 10%; }
@@ -71,9 +99,13 @@ body {
 .mid-left    { top: 40%; left: 5%; }
 .mid-right   { top: 40%; right: 5%; }
 .bottom-left { bottom: 10%; left: 12%; }
-.bottom-right{ bottom: 10%; right: 12%; } /* Fixed missing dot */
+.bottom-right{ bottom: 10%; right: 12%; }
 .extra-left  { top: 70%; left: 20%; }
 .extra-right { top: 70%; right: 20%; }
+
+.logos-container img:hover {
+  transform: scale(1.1);
+}
 
 /* Section 2: Hero */
 .hero-section {
@@ -84,6 +116,19 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 120px;
+  
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero-content {
@@ -114,6 +159,12 @@ body {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  background-color: #9c4db7;
 }
 
 .hero-image img {
@@ -128,6 +179,8 @@ body {
   padding: 60px 20px;
   display: flex;
   justify-content: center;
+  
+  animation: fadeIn 1s ease-in-out;
 }
 
 .testimonial-content {
@@ -181,6 +234,8 @@ body {
   background: linear-gradient(to bottom right, #6a1b9a, #0d47a1); /* Gradient to match the image */
   padding: 100px 20px;
   text-align: center;
+  
+  animation: fadeIn 1s ease-in-out;
 }
 
 .cta-section h2 {
@@ -199,11 +254,12 @@ body {
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .cta-button:hover {
   background-color: #d83a6b; /* Slightly darker shade for hover effect */
+  transform: scale(1.05);
 }
 
 /* Footer */
